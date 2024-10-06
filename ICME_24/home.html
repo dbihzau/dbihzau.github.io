@@ -1,0 +1,234 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<title>Privacy-Multimodal-ICME'24</title>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<script type="text/javascript">
+function displayDate(dt, showDateDifference) {
+  var hour = dt.getHours();
+  var minute = dt.getMinutes();
+  var temp = '' + ((hour < 10) ? '0' : '') + hour;  //((hour > 12) ? hour - 12 : hour);
+  // if (hour == 0)
+  //   temp = '12';
+  temp += ((minute < 10) ? ':0' : ':') + minute;
+  // temp += (hour >= 12) ? ' PM' : ' AM';
+  if (showDateDifference)
+    temp += (dt.getDay() != dt.getUTCDay() ? ' (+1d)' : '');
+  // temp += dt.getDay()
+  return temp;
+}
+
+function getTimezoneOffset() {
+  var offset = -(new Date()).getTimezoneOffset()/60;
+  var temp = "UTC" + (offset >= 0 ? "+" : "") + offset;
+  return temp;
+}
+
+function getLocalTimezone() {
+  try {
+    return Intl.DateTimeFormat().resolvedOptions().timeZone + ", " + getTimezoneOffset();
+  }
+  catch(e) {
+    return getTimezoneOffset();
+  }
+}
+
+function writeTimeRange(startTime, endTime, showDateDifference = false) {
+  var startTimeObj = new Date("2021-07-24T" + startTime + ":00.000-04:00");
+  var endTimeObj = new Date("2021-07-24T" + endTime + ":00.000-04:00");
+
+  //return document.write(displayDate(startTimeObj) + " – " + displayDate(endTimeObj) + " (" + getLocalTimezone() +")");
+  return document.write(displayDate(startTimeObj, showDateDifference) + " – " + displayDate(endTimeObj, showDateDifference));
+
+}
+</script>
+
+<head>
+<div class="container-top">
+    <div align="center">
+      <a href="https://2024.ieeeicme.org/" target="_blank"><img border="0" width="100%" src="./Privacy-ICME24/header__.jpg"></img></a>
+<!-- <p>
+<h3>ICME'24 Special Session on "Privacy-Preserving Multi-modal Analysis and its applications"</h3>
+
+<br><b>Final Submission Deadline</b>: <span style="color:red">December 30, 2023</span>
+<br><b>Notification Due</b>: March 12, 2024
+<br><b>Conference Dates</b>: July 15-19, 2024
+<br><b>Venue</b>: Niagara Falls Marriott, Niagara Falls, ON, Canada -->
+    </div>
+</div>
+</head>
+
+
+<body>
+
+<br>
+<div class="container_img">
+  <div class="row g-2">
+    <div class="col-md-4" align="center">
+        <div class="row" align="center">
+            <img src="imgs/mangye.jpg" class="rounded mx-auto d-block" alt="..." style="object-fit: contain;object-position: center; height:250px;">
+            <!-- <div class="card-body"> -->
+            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+            <a align="center"><b><a href="https://marswhu.github.io/index.html">Mang Ye</a></b></a>
+            <a align="center"></a><span style="color:red;">(Primary Contact)</span></a>
+            <t align="center">Wuhan University, China</t>
+        </div>
+    </div>
+
+    <div class="col-md-4" align="center">
+        <div class="row" align="center">
+            <img src="imgs/YL.png" class="rounded mx-auto d-block" alt="..." style="object-fit: contain;object-position: center; height:250px;">
+            <!-- <div class="card-body"> -->
+            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+            <a align="center"><b><a href="https://jasonyanglu.github.io/">Yang Lu</a></b></a>
+            <t align="center">Xiamen University, China</t>
+        </div>
+    </div>
+
+    <div class="col-md-4" align="center">
+        <div class="row" align="center">
+            <img src="imgs/ES.jpg" class="rounded mx-auto d-block" alt="..." style="object-fit: contain;object-position: center; height:250px;">
+            <!-- <div class="card-body"> -->
+            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+            <a align="center"><b><a href="https://www.researchgate.net/profile/Eduard-Snezhko">Eduard Snezhko</a></b></a>
+            <t align="center">Belarus State University, Belarus</t>
+        </div>
+    </div>
+
+    <div class="col-md-4" align="center">
+        <div class="row" align="center">
+            <img src="imgs/VK.png" class="rounded mx-auto d-block" alt="..." style="object-fit: contain;object-position: center; height:250px;">
+            <!-- <div class="card-body"> -->
+            <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+            <a align="center"><b><a href="https://image.org.by/#services">Vassili Kovalev</a></b></a>
+            <t align="center">Belarus State University, Belarus</t>
+        </div>
+    </div>
+
+    <div class="col-md-4" align="center">
+      <div class="row" align="center">
+          <img src="imgs/JBS.png" class="rounded mx-auto d-block" alt="..." style="object-fit: contain;object-position: center; height:250px;">
+          <!-- <div class="card-body"> -->
+          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+          <a align="center"><b><a href="https://www.fst.um.edu.mo/people/jianbingshen/">Jianbing Shen</a></b></a>
+          <t align="center">University of Macau, Macau, China</t>
+      </div>
+    </div>
+
+    <div class="col-md-4" align="center">
+      <div class="row" align="center">
+          <img src="imgs/PC.png" class="rounded mx-auto d-block" alt="..." style="object-fit: contain;object-position: center; height:250px;">
+          <!-- <div class="card-body"> -->
+          <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+          <a align="center"><b><a href="https://www.comp.hkbu.edu.hk/~pcyuen/">Pong C. Yuen</a></b></a>
+          <t align="center">Hong Kong Baptist University, Hong Kong, China</t>
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+<div class="container">
+    <h3>ICME'24 Special Session on <b>"Privacy-Preserving Multi-modal Analysis and Its Applications"</b></h3>
+    <h3>Call for Papers</h3>
+    <div class="overview">
+<p>The analysis of multi-modal data has become a pivotal research focus in artificial intelligence, as integrating information from various modalities enhances machine understanding and perception. However, the ethical concerns surrounding data privacy, especially in applications like surveillance and security, often restrict access to multi-modal datasets. Therefore, the advancement and application of Privacy-Preserving Multi-modal Analysis play a critical role in developing technologies reliant on multi-modal data. This ensures that the benefits of data-driven insights can be harnessed while upholding individuals' privacy.
+
+<p>This special issue addresses several significant challenges in Privacy-Preserving Multi-modal Analysis, including data heterogeneity, privacy and security concerns, scalability of multi-modal data, semantic gaps, explainability, and interpretability, along with computational complexity. The primary goal is to encourage a coordinated effort in the analysis of multi-modal data while safeguarding individual privacy across various multimedia applications. We invite researchers from multimedia, computer vision, and machine learning to contribute to this special issue, presenting recent advancements in deep learning research that prioritize individuals' privacy in diverse multimedia and multi-modal applications. Potential topics include, but are not limited to:
+<ul>
+	<li>Secure federated learning for multi-modal learning</li>
+	<li>Privacy-preserving techniques in cross-modal transfer learning</li>
+	<li>Semi-supervised learning for privacy-preserving multimedia analysis</li>
+	<li>Privacy-preserving domain generalization for multimedia</li>
+	<li>Privacy-preserving adversarial training for multi-modal analysis</li>
+	<li>Differential privacy in deep reinforcement learning for multimedia</li>
+	<li>Development of new benchmarks, metrics, and datasets for multi-modal learning</li>
+	<li>Privacy-preserving techniques in cross-modal retrieval systems</li>
+</ul>
+
+<p>A PDF version of the call for papers can be downloaded <a href="https://2024.ieeeicme.org/wp-content/uploads/sites/545/ICME_2024CFP1.pdf" target="_blank">here</a>.
+    </div>
+</div>
+
+<br>
+
+<div class="container">
+  <h3>Submission Guidelines and Important Dates</h3>
+  <div class="overview">
+<p>Submission of papers (the same with regular papers):</p>
+<ul>
+  <li>Regular (Special Session) Paper submission: <strong>December 30, 2023</strong></li>
+  <li>Submission of papers to workshops and other tracks : March 23, 2024</li>
+  <li>Industry/Application track paper submission : March 23, 2024</li>
+</ul>
+<p>Regular and Special Sessions:</p>
+<ul>
+	<li><b>Submission portal:</b> <a href="https://cmt3.research.microsoft.com/ICME2024" target="_blank">https://cmt3.research.microsoft.com/ICME2024</a></li>
+	<li><b>Length:</b> Papers must be no longer than 6 pages, including all text, figures, and references.</li>
+	<li><b>Abstract:</b> The abstract should be about 100-150 words.</li>
+	<li><b>Submission site:</b> All papers must indicate a Primary Subject Area to be appropriately reviewed. <b>Papers invited to a Special Session must indicate the Special Session as the Primary Subject Area of the paper.</b> The Special Sessions are open to all authors. All authors are invited to submit their papers to any of the Special Sessions by indicating the Special Session as the Primary Subject area of the paper.</li>
+	<li><b>Double blind rules:</b> ICME 2024 reviewing is double blind, which means that authors cannot know the names of the reviewers of their papers, and reviewers cannot know the names of the authors. Information that may identify the authors anywhere in the submitted materials must be avoided. In particular, in the submitted pdf paper, the usual list of authors, their institutions, and their contact information must be replaced by the phrase, “Anonymous ICME Submission.” Identifying information in the acknowledgments (e.g., co-workers and grant IDs), supplemental materials (e.g., titles in the videos, or attached papers), and links to the authors’ or their institutions’ websites must also be avoided. Please read Section 2 of the example paper below for further guidance on how to preserve anonymity. The only place that authors may be identified is in the online submission form. Submissions that do not conform to these double blind rules will be rejected immediately without review.</li>
+	<li><b>Dual submissions:</b> By submitting a manuscript to ICME, the authors guarantee that it has not been previously published (or accepted for publication) in substantially similar form. Furthermore, no paper that contains significant overlap with the contributions of this paper either has been or will be submitted during the ICME 2024 review period to either a journal or a conference.</li>
+	<!-- <li><b>Supplemental material:</b> Authors may optionally upload supplemental material. Supplemental material must be anonymized. Typically, supplemental material might include:
+    <ul>
+      <li>a short presentation summarizing the paper</li>
+      <li>videos of results that cannot be included in the main paper</li>
+      <li>a screen recording of a demo program</li>
+      <li>anonymized related submissions to other conferences and journals</li>
+      <li>appendices or technical reports containing extended proofs and mathematical derivations that are not essential for understanding the paper.</li>
+    </ul>
+    * Note that the contents of the supplemental material should be referred to appropriately in the paper and that reviewers are not obliged to look at it. All supplemental material must be zipped into a single file. There is a 20 MB limit on the size of this file.
+  </li>
+  <li><b>Presentation guarantee:</b> By submitting the paper, the authors guarantee that if the paper is accepted, it will be presented at the conference by one of the authors, except in case of emergency as determined by the Technical Co-Chairs. Furthermore, the presenter must register for the conference at one of the non-student rates offered, and must register before the deadline given for author registration. Failure to register before the deadline will result in automatic withdrawal of your paper from the conference proceedings and program. Failure to present the paper by an author in person will result in the paper not appearing in IEEE Xplore, and IEEE will retain the copyright. Also, the list of missing authors will be passed to the ICME Steering Committee.</li> -->
+</ul>
+
+<p>Example paper with detailed instructions and LaTeX template (zip file): <a href="https://www.2023.ieeeicme.org/download/icme2023template.zip" target="_blank">Link</a></p>
+
+<p>All accepted papers will be included in the ICME 2024 proceedings, published on the IEEE Xplore Digital Library.
+
+<p>Detail Information on paper submission can be found here: <a href="https://2024.ieeeicme.org/author-information-and-submission-instructions/" target="_blank">https://2024.ieeeicme.org/author-information-and-submission-instructions/</a>
+    </div>
+</div>
+
+<br>
+
+<div class="container">
+  <h3>Organizers</h3>
+  <div class="overview">
+<ul>
+	<li><a href="https://marswhu.github.io/index.html" target="_blank">Mang Ye</a> (Full Professor, Wuhan University, China)</li>
+	<li><a href="https://jasonyanglu.github.io/" target="_blank">Yang Lu</a> (Assistant Professor, Xiamen University, China)</li>
+  <li><a href="https://www.researchgate.net/profile/Eduard-Snezhko" target="_blank">Eduard Snezhko</a> (Researcher, Belarus State University, Belarus)</li>
+  <li><a href="https://image.org.by/#services" target="_blank">Vassili Kovalev</a> (Leading Researcher, Belarus State University, Belarus)</li>
+  <li><a href="https://www.fst.um.edu.mo/people/jianbingshen/" target="_blank">Jianbing Shen</a> (Full Professor, University of Macau, Macau, China)</li>
+  <li><a href="https://www.comp.hkbu.edu.hk/~pcyuen/" target="_blank">Pong C. Yuen</a> (Chair Professor, Hong Kong Baptist University, Hong Kong, China)</li>
+</ul>
+    </div>
+</div>
+
+<br>
+
+<!-- <div class="container">
+  <h3>Organized by</h3>
+  <div class="overview">
+<a href="https://www.uts.edu.au/" target="_blank"><img border="0" height="110" src="FL-ICME24/UTS.png"></img></a> &nbsp
+<a href="https://www.ntu.edu.sg/" target="_blank"><img border="0" height="60" src="FL-ICME24/NTU.png"></img></a> &nbsp
+<a href="https://trustful.federated-learning.org/" target="_blank"><img border="0" height="75" src="FL-ICME24/TrustFUL1.png"></img></a> &nbsp 
+    </div>
+</div> -->
+
+<br>
+
+<!-- <div class="container">
+    <div align="center">
+<script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5a0nqmzu1nu&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async"></script>
+    </div>
+</div> -->
+
+</body>
+
+</html>
